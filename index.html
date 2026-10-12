@@ -1,58 +1,221 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webサイトタイトル</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乙女ゲーム作品紹介サイト</title>
+  
+  <!-- Google Fonts (ガーリー・上品なフォント) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Lightbox2 CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-            <div class="logo">ロゴ</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">TOP</a></li>
-                    <li><a href="news.html">NEWS</a></li>
-                    <li><a href="story.html">STORY</a></li>
-                    <li><a href="character.html">CHARACTER</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="#top">LOGO</a>
+      </div>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="#top">TOP</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#story">STORY</a></li>
+          <li><a href="#character">CHARACTER</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#about">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="top">
-        <div class="main-visual">メインビジュアル</div>
-        
-        <div class="container">
-            <h2 class="section-title">NEWS</h2>
-            <div class="news-box">
-                <ul class="news-list">
-                    <li><span>20XX/XX/XX</span> テキストテキストテキストテキストテキスト</li>
-                    <li><span>20XX/XX/XX</span> テキストテキストテキストテキストテキスト</li>
-                    <li><span>20XX/XX/XX</span> テキストテキストテキストテキストテキスト</li>
-                </ul>
-            </div>
-
-            <h2 class="section-title">PRODUCT INFO</h2>
-            <div class="product-info">
-                <div class="image-placeholder">イメージ画像</div>
-                <div class="product-text">
-                    <p>テキストテキストテキスト</p>
-                    <p>テキストテキストテキスト</p>
-                    <p>テキストテキストテキスト</p>
-                </div>
-            </div>
+  <main>
+    <!-- TOP / メインビジュアル -->
+    <section id="top" class="section section-top">
+      <div class="main-visual">
+        <img src="SHARE.png" alt="メインビジュアル">
+        <div class="mv-title">
+          <h1>share homeostasis</h1>
+          <p>〜バランスを保つこと〜</p>
         </div>
+      </div>
+
+      <!-- TOP内 NEWS 簡易版 -->
+      <div class="container top-news">
+        <h2 class="section-title">NEWS</h2>
+        <div class="rounded-box">
+          <ul class="news-list">
+            <li><span class="date">2026/02/14</span><span class="text">公式サイトをリニューアルオープンいたしました。</span></li>
+            <li><span class="date">2026/02/01</span><span class="text">新規ギャラリー画像を追加公開しました。</span></li>
+            <li><span class="date">2026/01/15</span><span class="text">キャラクターキャスト情報を更新しました。</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div class="container product-info">
+        <h2 class="section-title">PRODUCT INFO</h2>
+        <div class="product-content">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="パッケージイメージ">
+          </div>
+          <div class="product-desc">
+            <p>タイトル：Secret Garden 〜運命の扉〜</p>
+            <p>ジャンル：女性向け恋愛ADV</p>
+            <p>対応機種：Nintendo Switch / iOS / Android</p>
+            <p>価格：通常版 6,800円（税込）</p>
+            <p>CERO：B（12才以上対象）</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr>
-    <footer>
-        フッター
-    </footer>
+    <!-- NEWS 全体 -->
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="section-title">NEWS</h2>
+        <div class="rounded-box">
+          <ul class="news-list full-list">
+            <li><span class="date">2026/02/14</span><span class="text">公式サイトをリニューアルオープンいたしました。</span></li>
+            <li><span class="date">2026/02/10</span><span class="text">バレンタイン特別壁紙プレゼントキャンペーンを開始！</span></li>
+            <li><span class="date">2026/02/01</span><span class="text">新規ギャラリー画像を追加公開しました。</span></li>
+            <li><span class="date">2026/01/20</span><span class="text">主題歌CDの発売が決定いたしました。</span></li>
+            <li><span class="date">2026/01/15</span><span class="text">キャラクターキャスト情報を更新しました。</span></li>
+            <li><span class="date">2026/01/01</span><span class="text">新年のご挨拶と今後の更新スケジュールについて。</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- STORY -->
+    <section id="story" class="section">
+      <div class="container">
+        <h2 class="section-title">STORY</h2>
+        <div class="rounded-box story-box">
+          <h3>花々に囲まれた古城で紡がれる、甘く切ない愛の物語</h3>
+          <p>古くから咲き誇る神秘の花園を抱く、歴史ある名門貴族の屋敷。</p>
+          <p>主人公はひょんなことから、その屋敷の庭師として招かれることとなる。</p>
+          <p>そこで出会ったのは、それぞれに秘密と孤独を抱えた美しき青年たち。</p>
+          <p>絡み合う運命の糸と、隠された過去の真実。</p>
+          <p>花々の香りに包まれた幻想的な世界で、あなたが選ぶ恋の行方は――。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTER -->
+    <section id="character" class="section">
+      <div class="container">
+        <h2 class="section-title">CHARACTER</h2>
+        
+        <!-- キャラクタースライダー / カルーセル風サムネイル -->
+        <div class="character-slider">
+          <button class="slider-arrow prev">&lt;</button>
+          <div class="chara-thumbnails">
+            <div class="chara-thumb active">
+              <img src="hiroin3.PNG" alt="ヒロイン">
+            </div>
+            <div class="chara-thumb">
+              <img src="IMG_3886.JPG" alt="オキシトシン">
+            </div>
+            <div class="chara-thumb">
+              <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=300&q=80" alt="キャラ3">
+            </div>
+          </div>
+          <button class="slider-arrow next">&gt;</button>
+        </div>
+
+        <!-- キャラクターメイン詳細 -->
+        <div class="rounded-box chara-detail">
+          <div class="chara-detail-inner">
+            <div class="chara-stand">
+              <img src="hiroin3.PNG" alt="ヒロインの立ち絵">
+            </div>
+            <div class="chara-info">
+              <div class="chara-logo">
+                <img src="hiroin3_logo.PNG" alt="ヒロインの絵">
+              </div>
+              <p class="chara-text">
+                「俺のそばから離れないでくれ。君の香りだけが、俺の心を安らげてくれるんだ……」<br><br>
+                ミステリアスで気品溢れる第一貴公子。一見冷徹に見えるが、心を許した相手には深い執着と情愛を見せる。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-btn-wrapper">
+          <button class="more-btn">more</button>
+        </div>
+
+        <!-- 詳細説明テキストボックス -->
+        <div class="rounded-box chara-sub-text">
+          <p>
+            キャラクターごとに異なるエンディングが用意されており、あなたの選択によって物語が大きく変化します。<br>
+            美麗なスチルと豪華声優陣によるフルボイスで描かれる、ドラマチックなストーリーをお楽しみいただけます。<br>
+            特定の条件を満たすことで開放されるシークレットルートや、アフターストーリーも多数収録。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="section-title">GALLERY</h2>
+        <div class="gallery-grid">
+          <!-- Lightbox2 連動リンク (data-lightbox="gallery") -->
+          <a href="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80" data-lightbox="gallery" data-title="月明かりの庭園" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="ギャラリー画像1">
+          </a>
+          <a href="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=1200&q=80" data-lightbox="gallery" data-title="秘密のお茶会" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=80" alt="ギャラリー画像2">
+          </a>
+          <a href="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&q=80" data-lightbox="gallery" data-title="咲き誇る薔薇" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80" alt="ギャラリー画像3">
+          </a>
+          <a href="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80" data-lightbox="gallery" data-title="舞踏会での奇跡" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" alt="ギャラリー画像4">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">ABOUT</h2>
+        <div class="rounded-box about-box">
+          <h3>当サイトおよび研究課題について</h3>
+          <p>当ウェブサイトは、情報研究および自作創作研究を目的として作成されたプロトタイプサイトです。</p>
+          <p>女性向けコンテンツにおける視覚効果・UI/UXおよびガーリーデザインの世界観表現についての研究を行っています。</p>
+          <p>サイト内に掲載されているテキスト、画像等のコンテンツは研究・参考目的のダミーデータです。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Otome Game Research Project. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Lightbox2 JavaScript & jQuery (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
