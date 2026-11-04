@@ -46,7 +46,7 @@
     <!-- TOP / メインビジュアル -->
     <section id="top" class="section section-top">
       <div class="main-visual">
-        <img src="SHARE.png" alt="メインビジュアル">
+        <img src="images/SHARE.png" alt="メインビジュアル">
         <div class="mv-title">
           <h1>share homeostasis</h1>
           <p>〜バランスを保つこと〜</p>
@@ -105,68 +105,96 @@
       <div class="container">
         <h2 class="section-title">STORY</h2>
         <div class="rounded-box story-box">
-          <h3>花々に囲まれた古城で紡がれる、甘く切ない愛の物語</h3>
-          <p>古くから咲き誇る神秘の花園を抱く、歴史ある名門貴族の屋敷。</p>
-          <p>主人公はひょんなことから、その屋敷の庭師として招かれることとなる。</p>
-          <p>そこで出会ったのは、それぞれに秘密と孤独を抱えた美しき青年たち。</p>
-          <p>絡み合う運命の糸と、隠された過去の真実。</p>
-          <p>花々の香りに包まれた幻想的な世界で、あなたが選ぶ恋の行方は――。</p>
+          <h3>個性的な6人の男性と1人の女性男女共同シェアハウスでの日常の物語。
+          </h3>
+          <p>様々な性格を持つ6人の男性と、波瀾万丈な生活を送ろう。</p>
+          <p>悲しみも喜びもシェアしたら怖くない。</p>
+
+          <p>絡み合う運命の糸と、隠された本音の真実。</p>
+          <p>あなたが選ぶ恋の行方は――。</p>
         </div>
       </div>
     </section>
 
-    <!-- CHARACTER -->
+   <!-- CHARACTER -->
     <section id="character" class="section">
       <div class="container">
         <h2 class="section-title">CHARACTER</h2>
         
-        <!-- キャラクタースライダー / カルーセル風サムネイル -->
+        <!-- キャラクタースライダー（7人対応） -->
         <div class="character-slider">
-          <button class="slider-arrow prev">&lt;</button>
-          <div class="chara-thumbnails">
-            <div class="chara-thumb active">
-              <img src="hiroin3.PNG" alt="ヒロイン">
-            </div>
-            <div class="chara-thumb">
-              <img src="IMG_3886.JPG" alt="オキシトシン">
-            </div>
-            <div class="chara-thumb">
-              <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=300&q=80" alt="キャラ3">
+          <button class="slider-arrow prev" aria-label="前へ">&lt;</button>
+          <div class="chara-thumbnails-wrapper">
+            <div class="chara-thumbnails">
+              
+              <!-- 1. ヒロイン -->
+              <a href="hiroin.html" class="chara-thumb active" data-index="0">
+                <img src="images/hiroin3.PNG" alt="ヒロイン">
+                <span class="thumb-name">ヒロイン</span>
+              </a>
+
+              <!-- 2. セロトニン -->
+              <a href="serotonin.html" class="chara-thumb" data-index="1">
+                <img src="images/serotoninAs.PNG" alt="セロトニン">
+                <span class="thumb-name">セロトニン</span>
+              </a>
+
+              <!-- 3. コルチゾール -->
+              <a href="cortisol.html" class="chara-thumb" data-index="2">
+                <img src="images/IMG_3892.jpg" alt="コルチゾール">
+                <span class="thumb-name">コルチゾール</span>
+              </a>
+
+              <!-- 4. オキシトシン -->
+              <a href="oxytocin.html" class="chara-thumb" data-index="3">
+                <img src="images/IMG_3886.JPG" alt="オキシトシン">
+                <span class="thumb-name">オキシトシン</span>
+              </a>
+
+              <!-- 5. アドレナリン -->
+              <a href="adrenaline.html" class="chara-thumb" data-index="4">
+                <img src="images/IMG_3888.jpg" alt="アドレナリン">
+                <span class="thumb-name">アドレナリン</span>
+              </a>
+
+              <!-- 6. ドーパミン -->
+              <a href="dopamine.html" class="chara-thumb" data-index="5">
+                <img src="images/IMG_3889.jpg" alt="ドーパミン">
+                <span class="thumb-name">ドーパミン</span>
+              </a>
+
+              <!-- 7. ノルアドレナリン -->
+              <a href="noradrenaline.html" class="chara-thumb" data-index="6">
+                <img src="images/IMG_3890.jpg" alt="ノルアドレナリン">
+                <span class="thumb-name">ノルアドレナリン</span>
+              </a>
+
             </div>
           </div>
-          <button class="slider-arrow next">&gt;</button>
+          <button class="slider-arrow next" aria-label="次へ">&gt;</button>
         </div>
 
-        <!-- キャラクターメイン詳細 -->
+        <!-- キャラクターメイン詳細（クリックすると各個別ページへリンクします） -->
         <div class="rounded-box chara-detail">
           <div class="chara-detail-inner">
             <div class="chara-stand">
-              <img src="hiroin3.PNG" alt="ヒロインの立ち絵">
+              <a href="hiroin.html" id="charaLinkStand">
+                <img id="charaStandImg" src="hiroin3.PNG" alt="立ち絵イラスト">
+              </a>
             </div>
             <div class="chara-info">
-              <div class="chara-logo">
-                <img src="hiroin3_logo.PNG" alt="ヒロインの絵">
-              </div>
-              <p class="chara-text">
-                「俺のそばから離れないでくれ。君の香りだけが、俺の心を安らげてくれるんだ……」<br><br>
-                ミステリアスで気品溢れる第一貴公子。一見冷徹に見えるが、心を許した相手には深い執着と情愛を見せる。
+              <h3 id="charaName">ヒロイン</h3>
+              <p class="chara-voice-sample" id="charaVoice">「みんなが笑って過ごせるなら、私、どんなことでも頑張れるよ。」</p>
+              <p class="chara-text" id="charaDesc">
+                柔らかく心優しい大学生。自分のことよりも周囲の平和や他人の幸せを優先し、個性豊かな住人たちの痛みに寄り添いながらハウスのバランスを保とうと奮闘する。
               </p>
+              <div class="more-btn-wrapper" style="text-align: left; margin-top: 20px;">
+                <a href="hiroin.html" id="charaDetailBtn" class="more-btn" style="display: inline-block;">詳しく見る &gt;</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="more-btn-wrapper">
-          <button class="more-btn">more</button>
-        </div>
-
-        <!-- 詳細説明テキストボックス -->
-        <div class="rounded-box chara-sub-text">
-          <p>
-            キャラクターごとに異なるエンディングが用意されており、あなたの選択によって物語が大きく変化します。<br>
-            美麗なスチルと豪華声優陣によるフルボイスで描かれる、ドラマチックなストーリーをお楽しみいただけます。<br>
-            特定の条件を満たすことで開放されるシークレットルートや、アフターストーリーも多数収録。
-          </p>
-        </div>
       </div>
     </section>
 
@@ -208,7 +236,7 @@
 
   <!-- フッター -->
   <footer class="site-footer">
-    <p>&copy; 2026 Otome Game Research Project. All Rights Reserved.</p>
+    <p>&copy; 2026 SHARE HOMEOSTASIS</p>
   </footer>
 
   <!-- Lightbox2 JavaScript & jQuery (CDN) -->
